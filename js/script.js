@@ -1,6 +1,14 @@
 const modal = document.querySelector('.modal')
-console.log(modal)
+const closeModalBtn = document.querySelector('#modal-close-btn')
 
-window.addEventListener('onload', () => {
-  modal.display = 'block';
+setTimeout(() => {
+  modal.style.display = 'inline';
+  closeModalBtn.disabled = false;
+}, 1500)
+
+/* ===== Event Listeners ===== */
+
+/* Close Modal Button */
+closeModalBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
 })
