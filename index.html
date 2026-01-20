@@ -18,12 +18,17 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/favicon_io/favicon.ico"
+    />
     <!-- Title -->
     <title>Cookie Consent</title>
     <!-- Script -->
-    <script src="js/script.js" type="module " defer></script>
+    <script src="js/script.js" type="module" defer></script>
   </head>
 
   <body>
@@ -66,6 +71,33 @@
           track you, and we'll definitely spam you. To use this site, enter your
           name and email address and accept our ridiculous terms and conditions.
         </p>
+
+        <form id="modal-form" class="modal-form" action="">
+          <label for="username">Enter Full Name:</label>
+          <input
+            type="text"
+            id="username"
+            minlength="3"
+            name="username"
+            autocomplete="username"
+            placeholder="John Doe"
+            required
+          />
+          <label for="user-email">Enter Email Address:</label>
+          <input
+            type="email"
+            id="user-email"
+            class="user-email"
+            name="user-email"
+            autocomplete="user-email"
+            placeholder="johndoe@whacky.wonderful"
+            required
+          />
+          <div class="btn-container">
+            <button id="modal-decline-btn" class="modal-btn" type="button">Reject Data</button>
+            <button id="modal-submit-btn" class="modal-btn" type="submit">Submit Data</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
